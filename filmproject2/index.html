@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .navbar-collapse .navbar-nav .nav-item{
+            margin: 10px;
+        }
+        .form-group{
+            padding: 1rem;
+        }
+        th{
+            text-align: center;
+        }
+        footer{
+            width: 100%;
+            height: 5rem;
+            margin-top: 4rem;
+        }
+        .card-header h2{
+            background-color: white;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar  bg-danger  navbar-expand-md bg-danger ">
+        <div class="container-fluid" style="margin: 0px 10%;">
+            <a class="navbar-brand text-light d-flex align-items-center" href="#" >
+                <img src="./images/filmlogo1.png"  style="width: 4rem;" alt="">
+                <h2 style="padding: 1rem;">Film Project</h2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#addmovie">Add a Movie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#clear-all">Clear All Movies</a>
+                </li>
+            </ul>
+            <span class="navbar-text text-white">
+                Movie Manipulation
+            </span>
+          </div>
+        </div>
+      </nav>
+    
+    <div class="container" id="home">
+        <div class="card bg-danger text-light " style="margin-top: 40px;">
+            <div class="card-header"><h2 class="text-center">Movie Project</h2> </div>
+            <hr>
+            <div class="card-body">
+                <form action="" id="movieform">
+                    <div class="form-row row">
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="name" placeholder="Title">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="text" class="form-control" id="director" placeholder="Director">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" id="link" placeholder="Link">
+                        </div>
+                    </div>
+                    <div class="d-grid"><button id ="addmovie"class="btn btn-secondary" style="margin: 0.3rem;" type="submit">Add Movie</button></div>
+                </form>
+                <hr>
+            </div>
+            <div class="card-body">
+                <hr>
+                <h3 clas="card-title">Movies</h3>
+                <hr>
+                <table class="table table-ligtt">
+                    <thead>
+                        <tr>
+                            <th scope="col">Movie Banner</th>
+                            <th scope="col">Movie Title</th>
+                            <th scope="col">Director</th>
+                            <th scope="col">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody id="films">
+                    </tbody> 
+                </table>
+                <button class="btn btn-secondary" id="clear-all" href ="#">Clear All Movies</button>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-danger  text-light d-flex justify-content-center ">
+        <div class="container-fluid  text-center align-self-center"><h2>End Of Project</h2></div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="film.js"></script>
+    <script src="ui.js"></script>
+    <script src="storage.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
